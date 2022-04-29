@@ -55,7 +55,7 @@ public class FamilyTree
             	
             	if(child.getNodeWithName(targetName) != null)
             	{
-            		return child;
+            		return child.getNodeWithName(targetName);
             	}
             }
             
@@ -164,7 +164,7 @@ public class FamilyTree
 			parentNode = root = new TreeNode(parent);
 		else
 		{
-			parentNode = root.getNodeWithName("parent");
+			parentNode = root.getNodeWithName(parent);
 			if (parentNode == null) {
 				throw new TreeException("Something wrong with data file");
 			}
